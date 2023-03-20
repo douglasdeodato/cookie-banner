@@ -170,7 +170,7 @@
     left: 0;
     right: 0;
     height: 250px;
-    background-color: blue;
+    background-color: #008093;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,6 +179,8 @@
   .banner-content {
     text-align: center;
     color: white;
+    max-width: 1050px!important;
+    text-align: left;
   }
   
   .banner-title {
@@ -192,14 +194,14 @@
   }
   
   .banner-buttons {
-    display: flex;
+    /*display: flex;*/
     gap: 10px;
   }
 
   #myBtn, #extraBtn {
     background-color: white;
     border: none;
-    color: blue;
+    color: #008093;
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
@@ -211,7 +213,7 @@
   }
   
   #myBtn:hover, #extraBtn:hover {
-    background-color: darkblue;
+    background-color: #004E59;
     color: white;
   }
   
