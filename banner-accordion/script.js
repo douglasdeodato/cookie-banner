@@ -1,4 +1,3 @@
-
 const modal = document.getElementById("myModal");
 const openBtn = document.getElementById("myBtn");
 const closeBtn = modal.querySelector(".close");
@@ -47,14 +46,18 @@ saveBtn.addEventListener("click", () => {
   document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
 });
 
-// Set a cookie to remember that the banner should be hidden for 6 months
-
-const hideBannerCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('hideBanner='));
-const hideBanner = hideBannerCookie ? hideBannerCookie.split('=')[1] === 'true' : false;
-if (hideBanner) {
-  const banner = document.querySelector(".banner");
-  banner.style.display = "none";
+// Function to check the banner cookie and hide the banner if necessary
+function checkBannerCookie() {
+  const hideBannerCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('hideBanner='));
+  const hideBanner = hideBannerCookie ? hideBannerCookie.split('=')[1] === 'true' : false;
+  if (hideBanner) {
+    const banner = document.querySelector(".banner");
+    banner.style.display = "none";
+  }
 }
+
+// Call the function to check the banner cookie on page load
+checkBannerCookie();
 
 toggleBtn.checked = true;
 toggleTextOff.style.display = toggleBtn.checked ? "none" : "inline-block";
