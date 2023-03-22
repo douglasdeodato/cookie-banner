@@ -257,3 +257,130 @@ h3 {
   background-color: #004E59;
   color: white;
 }
+
+/* media queries*/
+
+
+@media only screen and (max-width: 767px) {
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 16px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 20px;
+  }
+  
+  .banner-title {
+    font-size: 1.5rem;
+  }
+  
+  .banner-text {
+    font-size: 1rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .modal-content {
+    width: 70%;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 16px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 20px;
+  }
+  
+  .banner-title {
+    font-size: 1.5rem;
+  }
+  
+  .banner-text {
+    font-size: 1rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .modal-content {
+    width: 50%;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 18px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 40px;
+  }
+  
+  .banner-title {
+    font-size: 2rem;
+  }
+  
+  .banner-text {
+    font-size: 1.2rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .modal-content {
+    width: 40%;
+    margin: 10% auto;
+    padding: 20px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 20px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 40px;
+  }
+  
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  
+  .banner-text {
+    font-size: 1.5rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
