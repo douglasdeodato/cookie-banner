@@ -4,6 +4,17 @@
 <head>
   <title>My Page</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
 <body>
@@ -13,7 +24,8 @@
       <h2 class="banner-title">We Value Your Privacy</h2>
       <p class="banner-text">This website uses cookies to understand how the website is used by its visitors, gather
         insights and improve user experience. You can choose to Accept these cookies or decline them by clicking Manage
-        My Settings. You can read our Privacy Policy here >>
+        My Settings. You can read our <a href=' https://iahip.org/Privacy-Policy' target="_blank">Privacy Policy
+          here</a>
 
       </p>
       <div class="banner-buttons">
@@ -29,9 +41,10 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>Irish Association of Humanistic &amp; Integrative Psychotherapy (IAHIP)</h2>
-      <p>When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies...</p>
-      <h3>Manage your settings</h3>
+      <h2 class="h2-modal">Irish Association of Humanistic &amp; Integrative Psychotherapy (IAHIP)</h2>
+      <!-- <p>When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies...</p> -->
+      <!-- <h3>Manage your settings</h3> -->
+      <div class="manage-header">Manage your settings</div>
       <div class="accordion">
         <div class="accordion-item">
           <div class="accordion-header">Performance Cookies
@@ -45,7 +58,11 @@
             </label>
           </div>
           <div class="accordion-content">
-            <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</p>
+            <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance
+              of our site. They help us to know which pages are the most and least popular and see how visitors move
+              around the site. All information these cookies collect is aggregated and therefore anonymous. If you do
+              not allow these cookies we will not know when you have visited our site, and will not be able to monitor
+              its performance.</p>
           </div>
         </div>
       </div>

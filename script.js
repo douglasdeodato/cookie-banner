@@ -72,3 +72,20 @@ toggleBtn.addEventListener("change", () => {
     console.log("Data collection stopped for domain: " + window.location.hostname);
   }
 });
+
+//add the banner back
+document.cookie = "hideBanner=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+
+/* for testing 
+
+document.cookie = "hideBanner=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+console.log("Banner cookie removed, refreshing the page...");
+document.cookie = "_gat=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "_gid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+location.reload();
+
+
+*/
+
