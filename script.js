@@ -30,7 +30,7 @@ accordionHeaders.forEach((header) => {
 });
 
 saveBtn.addEventListener("click", () => {
-  alert("Saved!");
+  //alert("Saved!");
   const banner = document.querySelector(".banner");
   banner.style.transition = "opacity 1s ease-out";
   banner.style.opacity = "0";
@@ -43,7 +43,7 @@ saveBtn.addEventListener("click", () => {
   // Set a cookie to remember that the banner should be hidden for 6 months
   const now = new Date();
   const sixMonthsFromNow = new Date(now.getTime() + 6 * 30 * 24 * 60 * 60 * 1000); // 6 months in milliseconds
-  document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
+  //document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
 });
 
 // Function to check the banner cookie and hide the banner if necessary
@@ -67,7 +67,7 @@ toggleBtn.addEventListener("change", () => {
   toggleTextOff.style.display = toggleBtn.checked ? "none" : "inline-block";
   toggleTextOn.style.display = toggleBtn.checked ? "inline-block" : "none";
   if (!toggleBtn.checked) {
-    alert("Toggle is off!");
+    //alert("Toggle is off!");
     window['ga-disable-UA-XXXXX-Y'] = true; // Replace UA-XXXXX-Y with your property ID
     console.log("Data collection stopped for domain: " + window.location.hostname);
   }
