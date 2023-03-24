@@ -44,6 +44,8 @@ saveBtn.addEventListener("click", () => {
   const now = new Date();
   const sixMonthsFromNow = new Date(now.getTime() + 6 * 30 * 24 * 60 * 60 * 1000); // 6 months in milliseconds
   //document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
+  document.body.style.setProperty("background-color", "white", "important");
+  document.body.style.pointerEvents = "auto";
 });
 
 // Function to check the banner cookie and hide the banner if necessary

@@ -1,3 +1,9 @@
+body {
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -16,6 +22,7 @@
   /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
+  pointer-events: auto;
 }
 
 /* Modal Content/Box */
@@ -199,6 +206,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: auto;
 }
 
 .banner-content {
@@ -220,7 +228,8 @@ h3 {
 }
 
 .banner-text a {
-  color:#004E59;
+  /* color:#004E59; */
+  color:white;
   text-decoration: underline;
   font-style: normal;
 }
