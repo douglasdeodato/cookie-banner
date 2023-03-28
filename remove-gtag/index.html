@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+</head>
+<body>
+  <h1>Welcome to my website</h1>
+  <p>This is my website. Please click the button below to give consent for Google Analytics tracking.</p>
+  <button onclick="giveConsent()">Give Consent</button>
+  <form id="consent-form">
+    <p>Please click the button below to give consent for Google Analytics tracking.</p>
+    <button type="submit">I Consent</button>
+  </form>
+  <button onclick="resetCookies()">Reset GA Cookies</button>
+  <script>
+    function giveConsent() {
+      console.log('User has given consent');
+      const consentForm = document.querySelector('#consent-form');
+      consentForm.style.display = 'none';
+      console.log('Consent form hidden');
+      enableTracking();
+      console.log('Google Analytics tracking enabled');
+    }
+
+    function enableTracking() {
+      console.log('Enabling Google Analytics tracking');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R83T9H4V702581', {
+        client_storage: 'none'
+      });
+      window['ga-disable-G-R83T9H4V702581'] = false;
+      
+      // Add Google Analytics tracking code here
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'G-R83T9H4V702581', 'auto');
+      ga('send', 'pageview');
+    }
+    
+    function resetCookies() {
+      console.log('Resetting GA cookies');
+      document.cookie.split(";").forEach(function(c) { 
+        document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+      });
+      console.log('GA cookies reset');
+    }
+
+    //document.cookie.split(";").forEach(function(c) { 
+  //document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+//});
+  </script>
+</body>
+</html>
