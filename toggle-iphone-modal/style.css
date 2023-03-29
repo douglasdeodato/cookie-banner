@@ -1,0 +1,407 @@
+body {
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* iahip style
+.zoneContentOuter .zoneContentInner {
+  background-color: rgba(0, 0, 0, 0.4) !important;; 
+} */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 9999;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  pointer-events: auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.h2-modal {
+  padding-left: 10px;
+}
+
+.manage-header {
+  font: 300 16px/normal helvetica;
+  color: #949493;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.accordion {
+  margin-top: 10px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  background-color: #eee;
+  color: #949493;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+.save-button {
+  background-color: #008093;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 16px; */
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.accordion-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  flex-grow: 1;
+}
+
+
+
+
+.iphone-toggle {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+}
+
+.iphone-toggle input[type="checkbox"] {
+  display: none;
+}
+
+.iphone-toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  background-color: #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.iphone-toggle-slider-ball {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.iphone-toggle input[type="checkbox"]:checked+.iphone-toggle-slider .iphone-toggle-slider-ball {
+  transform: translateX(25px);
+}
+
+.iphone-toggle input[type="checkbox"]:checked+.iphone-toggle-slider {
+  background-color: #66bb6a;
+}
+
+.toggle-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+.iphone-toggle input:checked+.iphone-toggle-slider .iphone-toggle-slider-ball {
+  transform: translateX(50%);
+}
+
+.iphone-toggle input:checked+.iphone-toggle-slider .toggle-text-on {
+  display: inline;
+}
+
+.iphone-toggle input:not(:checked)+.iphone-toggle-slider .toggle-text-off {
+  display: inline;
+}
+
+#toggle-text-on {
+  position: absolute;
+  right: 65px;
+  display: none;
+}
+
+#toggle-text-off {
+  position: absolute;
+  left: -36px;
+  display: inline;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background-color: #008093;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  max-width: 1050px !important;
+  text-align: left;
+}
+
+.banner-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white !important;
+}
+
+.banner-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.banner-text a {
+  /* color:#004E59; */
+  color:white;
+  text-decoration: underline;
+  font-style: normal;
+}
+
+.banner-text a:hover {
+  text-decoration: none;
+  /* Remove underline */
+}
+
+
+.banner-buttons {
+  /*display: flex;*/
+  gap: 10px;
+}
+
+
+#myBtn,
+#extraBtn {
+  background-color: white;
+  border: none;
+  color: #008093;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#myBtn:hover,
+#extraBtn:hover {
+  background-color: #004E59;
+  color: white;
+}
+
+/* media queries*/
+
+
+@media only screen and (max-width: 767px) {
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 16px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 20px;
+  }
+  
+  .banner-title {
+    font-size: 1.5rem;
+  }
+  
+  .banner-text {
+    font-size: 1rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .modal-content {
+    width: 70%;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 16px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 20px;
+  }
+  
+  .banner-title {
+    font-size: 1.5rem;
+  }
+  
+  .banner-text {
+    font-size: 1rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .modal-content {
+    width: 50%;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 18px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 40px;
+  }
+  
+  .banner-title {
+    font-size: 2rem;
+  }
+  
+  .banner-text {
+    font-size: 1.2rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .modal-content {
+    width: 40%;
+    margin: 10% auto;
+    padding: 20px;
+  }
+  
+  .accordion-header h2 {
+    font-size: 20px;
+  }
+  
+  .banner {
+    height: auto;
+    padding: 40px;
+  }
+  
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  
+  .banner-text {
+    font-size: 1.20rem;
+  }
+  
+  #myBtn,
+  #extraBtn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
+
+/* from the js */
+.banner.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-out;
+}
