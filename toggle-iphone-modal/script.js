@@ -10,6 +10,7 @@ const GA_TRACKING_ID = 'G-R83T9H4V702581';
 
 openBtn.addEventListener("click", () => {
   modal.style.display = "block";
+  giveConsent(); // adds ga when modal is open
 });
 
 closeBtn.addEventListener("click", () => {
