@@ -37,12 +37,11 @@ saveBtn.addEventListener("click", () => {
   }, 5000);
   modal.style.display = "none";
 
-
-
   // Set a cookie to remember that the banner should be hidden for 6 months
   const now = new Date();
   const sixMonthsFromNow = new Date(now.getTime() + 6 * 30 * 24 * 60 * 60 * 1000); // 6 months in milliseconds
-  //document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
+  document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
+
   document.body.style.setProperty("background-color", "#f0eeee", "important");
   document.body.style.pointerEvents = "auto";
 });
@@ -68,7 +67,6 @@ toggleBtn.addEventListener("change", () => {
   toggleTextOff.style.display = toggleBtn.checked ? "none" : "inline-block";
   toggleTextOn.style.display = toggleBtn.checked ? "inline-block" : "none";
   if (!toggleBtn.checked) {
-    //alert("Toggle is off!");
     window['ga-disable-UA-XXXXX-Y'] = true; // Replace UA-XXXXX-Y with your property ID
     console.log("Data collection stopped for domain: " + window.location.hostname);
     resetGACookies();
@@ -76,7 +74,7 @@ toggleBtn.addEventListener("change", () => {
 });
 
 // Function to remove GA cookies
-function removeGACookies() {
+function resetGACookies() {
   console.log('Resetting GA cookies');
   document.cookie.split(";").forEach(function(c) { 
     document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
@@ -85,5 +83,4 @@ function removeGACookies() {
 }
 
 // Call the function to remove GA cookies on page load
-removeGACookies();
-
+resetGACookies();
