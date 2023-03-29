@@ -52,6 +52,11 @@ saveBtn.addEventListener("click", () => {
 
 // Remove _ga_R8988888333 cookie
 //document.cookie = "_ga_R83T9H4V70=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+// Remove _ga cookie with specific domain and path
+//document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=https://iaohipi.wildapricot.org/;";
+
+// Remove _ga_R8988888333 cookie with specific domain and path
+//document.cookie = "_ga_R8988888333=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=example.com;";
 
 });
 
