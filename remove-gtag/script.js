@@ -23,7 +23,7 @@ function enableTracking() {
   ga('create', GA_TRACKING_ID, 'auto');
   ga('send', 'pageview');
 }
-    
+
 function resetCookies() {
   console.log('Resetting GA cookies');
   document.cookie.split(";").forEach(function(c) { 
