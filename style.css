@@ -398,3 +398,10 @@ h3 {
     padding: 12px 24px;
   }
 }
+
+/* from the js */
+.banner.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-out;
+}

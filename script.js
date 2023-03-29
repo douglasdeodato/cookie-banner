@@ -30,15 +30,14 @@ accordionHeaders.forEach((header) => {
 });
 
 saveBtn.addEventListener("click", () => {
-  //alert("Saved!");
   const banner = document.querySelector(".banner");
-  banner.style.transition = "opacity 1s ease-out";
-  banner.style.opacity = "0";
-  banner.style.pointerEvents = "none";
+  banner.classList.add("hide");
   setTimeout(() => {
     banner.style.display = "none";
   }, 5000);
   modal.style.display = "none";
+
+
 
   // Set a cookie to remember that the banner should be hidden for 6 months
   const now = new Date();
