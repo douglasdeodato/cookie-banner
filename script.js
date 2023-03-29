@@ -44,8 +44,15 @@ saveBtn.addEventListener("click", () => {
   const now = new Date();
   const sixMonthsFromNow = new Date(now.getTime() + 6 * 30 * 24 * 60 * 60 * 1000); // 6 months in milliseconds
   //document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
-  document.body.style.setProperty("background-color", "white", "important");
+  document.body.style.setProperty("background-color", "#f0eeee", "important");
   document.body.style.pointerEvents = "auto";
+
+  //// Remove _ga cookie
+//document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+// Remove _ga_R8988888333 cookie
+//document.cookie = "_ga_R83T9H4V70=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
 });
 
 // Function to check the banner cookie and hide the banner if necessary

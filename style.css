@@ -3,6 +3,10 @@ body {
   background-color: rgba(0,0,0,0.7);
 }
 
+/* iahip style
+.zoneContentOuter .zoneContentInner {
+  background-color: rgba(0, 0, 0, 0.4) !important;; 
+} */
 
 /* The Modal (background) */
 .modal {
@@ -219,6 +223,7 @@ h3 {
 .banner-title {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: white !important;
 }
 
 .banner-text {
@@ -384,7 +389,7 @@ h3 {
   }
   
   .banner-text {
-    font-size: 1.5rem;
+    font-size: 1.20rem;
   }
   
   #myBtn,
