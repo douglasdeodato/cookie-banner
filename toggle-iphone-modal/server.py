@@ -2,7 +2,7 @@ import http.server
 import socketserver
 import webbrowser
 
-PORT = 9000
+PORT = 8000
 
 Handler = http.server.SimpleHTTPRequestHandler
 
