@@ -45,6 +45,18 @@ saveBtn.addEventListener("click", () => {
   //document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
   document.body.style.setProperty("background-color", "#f0eeee", "important");
   document.body.style.pointerEvents = "auto";
+
+  //// Remove _ga cookie
+//document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+// Remove _ga_R8988888333 cookie
+//document.cookie = "_ga_R83T9H4V70=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+// Remove _ga cookie with specific domain and path
+//document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=https://iaohipi.wildapricot.org/;";
+
+// Remove _ga_R8988888333 cookie with specific domain and path
+//document.cookie = "_ga_R8988888333=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=example.com;";
+
 });
 
 // Function to check the banner cookie and hide the banner if necessary
@@ -71,19 +83,22 @@ toggleBtn.addEventListener("change", () => {
     //alert("Toggle is off!");
     window['ga-disable-UA-XXXXX-Y'] = true; // Replace UA-XXXXX-Y with your property ID
     console.log("Data collection stopped for domain: " + window.location.hostname);
-    resetGACookies();
   }
 });
 
-// Function to remove GA cookies
-function removeGACookies() {
-  console.log('Resetting GA cookies');
-  document.cookie.split(";").forEach(function(c) { 
-    document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
-  });
-  console.log('GA cookies reset');
-}
+//add the banner back
+document.cookie = "hideBanner=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
-// Call the function to remove GA cookies on page load
-removeGACookies();
+
+/* for testing 
+
+document.cookie = "hideBanner=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+console.log("Banner cookie removed, refreshing the page...");
+document.cookie = "_gat=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "_gid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+location.reload();
+
+
+*/
 
