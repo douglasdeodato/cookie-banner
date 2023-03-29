@@ -42,8 +42,8 @@ saveBtn.addEventListener("click", () => {
   const sixMonthsFromNow = new Date(now.getTime() + 6 * 30 * 24 * 60 * 60 * 1000); // 6 months in milliseconds
   document.cookie = `hideBanner=true; expires=${sixMonthsFromNow.toUTCString()}; path=/`;
 
-  document.body.style.setProperty("background-color", "#f0eeee", "important");
-  document.body.style.pointerEvents = "auto";
+  // Remove all GA cookies
+  removeGACookies();
 });
 
 // Function to check the banner cookie and hide the banner if necessary
@@ -69,18 +69,17 @@ toggleBtn.addEventListener("change", () => {
   if (!toggleBtn.checked) {
     window['ga-disable-UA-XXXXX-Y'] = true; // Replace UA-XXXXX-Y with your property ID
     console.log("Data collection stopped for domain: " + window.location.hostname);
-    resetGACookies();
+    removeGACookies();
   }
 });
 
-// Function to remove GA cookies
-function resetGACookies() {
+// Function to remove all GA cookies
+function removeGACookies() {
   console.log('Resetting GA cookies');
   document.cookie.split(";").forEach(function(c) { 
-    document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+    if (c.trim().startsWith('_ga')) {
+      document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+    }
   });
   console.log('GA cookies reset');
 }
-
-// Call the function to remove GA cookies on page load
-resetGACookies();
