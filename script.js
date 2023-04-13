@@ -1,3 +1,5 @@
+//Variables and Constants
+
 const modal = document.getElementById("myModal");
 const openBtn = document.getElementById("myBtn");
 const closeBtn = modal.querySelector(".close");
@@ -7,6 +9,8 @@ const toggleBtn = modal.querySelector("#toggle-button");
 const toggleTextOff = modal.querySelector("#toggle-text-off");
 const toggleTextOn = modal.querySelector("#toggle-text-on");
 const GA_TRACKING_ID = 'G-R83T9H4V702581';
+
+//Event Listeners
 
 openBtn.addEventListener("click", () => {
   modal.style.display = "block";
@@ -36,10 +40,13 @@ saveBtn.addEventListener("click", () => {
   banner.classList.add("hide");
   setTimeout(() => {
     banner.style.display = "none";
+   
   }, 5000);
   modal.style.display = "none";
-
+  document.body.style.pointerEvents = "auto"; ///teststststs
 });
+
+//Helper Functions
 
 // Define giveConsent function
 function giveConsent() {
@@ -76,6 +83,8 @@ function resetCookies() {
   console.log('GA cookies reset');
   window['ga-disable-' + GA_TRACKING_ID] = true;
 }
+
+// Toggle Button
 
 // Add event listener to toggle button
 toggleBtn.addEventListener("change", () => {
