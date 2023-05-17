@@ -14,6 +14,28 @@ const toggleTextOn2 = modal.querySelector("#toggle-text-on-2");
 
 const GA_TRACKING_ID = 'G-R83T9H4V702581';
 
+
+// hide banner
+
+var banner = document.querySelector('.banner');
+var acceptButton = document.getElementById('extraBtn');
+var expirationDate = localStorage.getItem('bannerExpiration');
+
+if (expirationDate && new Date() < new Date(expirationDate)) {
+  banner.style.display = 'none';
+}
+
+acceptButton.addEventListener('click', function() {
+  var sixMonthsLater = new Date();
+  sixMonthsLater.setMonth(sixMonthsLater.getMonth() + 6);
+  localStorage.setItem('bannerExpiration', sixMonthsLater);
+  banner.style.display = 'none';
+});
+
+// test console put banner back
+//localStorage.setItem('bannerExpiration', new Date(2000, 0, 1));
+
+
 //Event Listeners
 
 openBtn.addEventListener("click", () => {
@@ -123,3 +145,4 @@ toggleTextOn2.style.display = toggleBtn2.checked ? "inline-block" : "none";
 
 // Disable toggle button 2
 toggleBtn2.disabled = true;
+
