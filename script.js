@@ -61,16 +61,34 @@ accordionHeaders.forEach((header) => {
   });
 });
 
+// Check if the banner should be hidden based on the stored flag
+const shouldHideBanner = localStorage.getItem("hideBanner");
+if (shouldHideBanner) {
+  const banner = document.querySelector(".banner");
+  banner.style.display = "none";
+}
+
 saveBtn.addEventListener("click", () => {
   const banner = document.querySelector(".banner");
   banner.classList.add("hide");
+
+  // Store the flag to hide the banner in local storage
+  localStorage.setItem("hideBanner", "true");
+
   setTimeout(() => {
     banner.style.display = "none";
-   
-  }, 5000);
+  }, 6 * 30 * 24 * 60 * 60 * 1000); // 6 months in milliseconds
+
   modal.style.display = "none";
-  document.body.style.pointerEvents = "auto"; ///teststststs
+  document.body.style.pointerEvents = "auto";
 });
+
+//for test and put the banner back in the console log
+// Clear the "hideBanner" flag from local storage
+// localStorage.removeItem("hideBanner");
+
+// Refresh the page to display the banner again
+// location.reload();
 
 //Helper Functions
 
