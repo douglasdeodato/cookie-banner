@@ -199,6 +199,13 @@ h3 {
   display: inline;
 }
 
+#toggle-text-always-ON {
+  position: absolute;
+  left: -90px;
+  display: inline;
+  color: black;
+}
+
 .banner {
   position: fixed;
   bottom: 0;

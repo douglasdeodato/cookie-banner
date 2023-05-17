@@ -8,6 +8,10 @@ const saveBtn = modal.querySelector(".save-button");
 const toggleBtn = modal.querySelector("#toggle-button");
 const toggleTextOff = modal.querySelector("#toggle-text-off");
 const toggleTextOn = modal.querySelector("#toggle-text-on");
+const toggleBtn2 = modal.querySelector("#toggle-button-2");
+const toggleTextOff2 = modal.querySelector("#toggle-text-off-2");
+const toggleTextOn2 = modal.querySelector("#toggle-text-on-2");
+
 const GA_TRACKING_ID = 'G-R83T9H4V702581';
 
 //Event Listeners
@@ -110,3 +114,12 @@ toggleBtn.addEventListener("change", () => {
 toggleBtn.checked = true;
 toggleTextOff.style.display = toggleBtn.checked ? "none" : "inline-block";
 toggleTextOn.style.display = toggleBtn.checked ? "inline-block" : "none";
+
+
+// Set initial state of toggle button 2
+toggleBtn2.checked = true;
+toggleTextOff2.style.display = toggleBtn2.checked ? "none" : "inline-block";
+toggleTextOn2.style.display = toggleBtn2.checked ? "inline-block" : "none";
+
+// Disable toggle button 2
+toggleBtn2.disabled = true;
