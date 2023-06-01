@@ -1,6 +1,6 @@
 body {
   pointer-events: none;
-}
+}  
 
 /* iahip style
 .zoneContentOuter .zoneContentInner {
@@ -240,8 +240,8 @@ h3 {
 
 .banner-text a {
   /* color:#004E59; */
-  color:white;
-  text-decoration: underline;
+  color:white !important;
+  text-decoration: underline !important;
   font-style: normal;
 }
 

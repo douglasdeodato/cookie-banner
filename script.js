@@ -25,6 +25,32 @@ if (expirationDate && new Date() < new Date(expirationDate)) {
   banner.style.display = 'none';
 }
 
+
+if (expirationDate && new Date() < new Date(expirationDate)) {
+  banner.style.display = 'none';
+}
+
+// Check if pointer events were previously enabled and apply the state
+window.addEventListener('DOMContentLoaded', function() {
+  var pointerEventsState = localStorage.getItem('pointerEventsState');
+  if (pointerEventsState === 'enabled') {
+    enablePointerEvents();
+  }
+});
+
+// Enable pointer events and store the state in localStorage
+function enablePointerEvents() {
+  document.body.style.pointerEvents = 'auto';
+  localStorage.setItem('pointerEventsState', 'enabled');
+}
+
+// Disable pointer events and store the state in localStorage
+function disablePointerEvents() {
+  document.body.style.pointerEvents = 'none';
+  localStorage.setItem('pointerEventsState', 'disabled');
+}
+
+
 acceptButton.addEventListener('click', function() {
   var sixMonthsLater = new Date();
   sixMonthsLater.setMonth(sixMonthsLater.getMonth() + 6);
