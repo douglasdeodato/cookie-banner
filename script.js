@@ -30,6 +30,7 @@ acceptButton.addEventListener('click', function() {
   sixMonthsLater.setMonth(sixMonthsLater.getMonth() + 6);
   localStorage.setItem('bannerExpiration', sixMonthsLater);
   banner.style.display = 'none';
+  document.body.style.pointerEvents = "auto";
 });
 
 // test console put banner back
